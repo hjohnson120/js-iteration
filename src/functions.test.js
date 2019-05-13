@@ -63,7 +63,12 @@
  * }
  */
 
-// ...
+const yelling = words => {
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i].toUpperCase()
+  }
+  return words
+}
 
 /**
  *
@@ -72,22 +77,38 @@
  * the numbers multiplied by 2
  */
 
-// ...
+const doubleTrouble = numbers => {
+  for (let i = 0; i < numbers.length; i++) {
+    numbers[i] = numbers[i] * 2
+  }
+  return numbers
+}
 
 /*
  * Define a function stringyIndexes() that takes an array of
  * strings as an argument and returns a new array with each string
  * suffixed with " is at index X" where X is the index of the element
  */
-
-// ...
+let array = ['how', 'now', 'brown', 'cow']
+const stringyIndexes = array => {
+  for (let i = 0; i < array.length; i++) {
+    array[i] = array[i] + ' is at index ' + i
+  }
+  return array
+}
 
 /*
  * Define a function onlyTheEvenSurvive that accepts an array of
  * numbers and returns only the elements that are even
  */
+const numbers = [42, 50, 100, 5, -43, 17, 44]
+const onlyTheEvenSurvive = () => {
+  for (let i = 0; i < onlyTheEvenSurvive.length; i++) {
+    if ( i%0) {
+      
 
-// ...
+  }
+}
 
 /*
  * Define a function onlyTheEvenIndexedSurvive that accepts an array of
@@ -189,7 +210,9 @@ import test from 'ava'
 
 const ensureDefined = (t, method) => {
   if (eval(`typeof ${method}`) !== 'function') {
-    t.fail(`\n\n\n\n\n⚡️⚡️⚡️⚡️⚡️ The next step is to define the function ${method} ⚡️⚡️⚡️⚡️⚡️\n\n\n`)
+    t.fail(
+      `\n\n\n\n\n⚡️⚡️⚡️⚡️⚡️ The next step is to define the function ${method} ⚡️⚡️⚡️⚡️⚡️\n\n\n`
+    )
   }
 }
 
