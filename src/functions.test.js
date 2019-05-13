@@ -131,9 +131,9 @@ const onlyTheEvenIndexedSurvive = numbers => {
  *
  */
 
-const bestMoviesOfTheYear = (movie, year) => {
-  return movie.filter(movie => {
-    return movie.score > 90 && movie.year === year
+const bestMoviesOfTheYear = (movies, year) => {
+  return movies.filter(movies => {
+    return movies.score > 90 && movies.year === year
   })
 }
 
@@ -143,7 +143,11 @@ const bestMoviesOfTheYear = (movie, year) => {
  * odd.
  */
 
-// ...
+const everyoneIsOdd = odd => {
+  return odd.filter(odd => {
+    return odd % 2 === 1
+  })
+}
 
 /*
  * Define a function findTheNeedle that accepts an array of
