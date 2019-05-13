@@ -89,7 +89,6 @@ const doubleTrouble = numbers => {
  * strings as an argument and returns a new array with each string
  * suffixed with " is at index X" where X is the index of the element
  */
-let array = ['how', 'now', 'brown', 'cow']
 const stringyIndexes = array => {
   for (let i = 0; i < array.length; i++) {
     array[i] = array[i] + ' is at index ' + i
@@ -101,21 +100,21 @@ const stringyIndexes = array => {
  * Define a function onlyTheEvenSurvive that accepts an array of
  * numbers and returns only the elements that are even
  */
-const numbers = [42, 50, 100, 5, -43, 17, 44]
-const onlyTheEvenSurvive = () => {
-  for (let i = 0; i < onlyTheEvenSurvive.length; i++) {
-    if ( i%0) {
-      
-
-  }
+const onlyTheEvenSurvive = numbers => {
+  return numbers.filter(number => {
+    return number % 2 === 0
+  })
 }
-
 /*
  * Define a function onlyTheEvenIndexedSurvive that accepts an array of
  * numbers and returns only the elements at indexes that are even
  */
 
-// ...
+const onlyTheEvenIndexedSurvive = numbers => {
+  return numbers.filter((number, i) => {
+    return i % 2 === 0
+  })
+}
 
 /*
  * Define a function bestMoviesOfTheYear that accepts an array of
@@ -129,9 +128,14 @@ const onlyTheEvenSurvive = () => {
  *   year: "2017",
  *   score: 99
  * }
+ *
  */
 
-// ...
+const bestMoviesOfTheYear = (movie, year) => {
+  return movie.filter(movie => {
+    return movie.score > 90 && movie.year === year
+  })
+}
 
 /*
  * Define a function everyoneIsOdd that accepts an array of
