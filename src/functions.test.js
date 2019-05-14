@@ -132,9 +132,13 @@ const onlyTheEvenIndexedSurvive = numbers => {
  */
 
 const bestMoviesOfTheYear = (movies, year) => {
-  return movies.filter(movies => {
-    return movies.score > 90 && movies.year === year
-  })
+  return movies
+    .filter(movies => {
+      return movies.score > 90 && movies.year === year
+    })
+    .map(movies => {
+      return movies + year
+    })
 }
 
 /*
